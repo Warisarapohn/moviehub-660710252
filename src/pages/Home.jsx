@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getMovies } from '../api/tmdb';
+import { getMovies } from '../api/backend';   // TODO ขั้นที่ 5: เปลี่ยนจาก '../api/tmdb' เป็น '../api/backend'
 import { Link } from 'react-router-dom';
 import FeaturedCarousel from '../components/FeaturedCarousel';
 //import { movies as localMovies } from '../data/data';
