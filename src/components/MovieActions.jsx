@@ -18,13 +18,15 @@ function MovieActions({ movieId }) {
       </p>
     );
   }
- //ทำแล้ว
+
+  //ทำแล้ว
   async function handleVote(score) {
     // ส่งคะแนนไป server ก่อน ถ้าสำเร็จค่อยเปลี่ยน state
     try {
       await putVote(movieId, score, token);
       setMyScore(score);
-      setMessage(null);
+
+      setMessage(`ให้คะแนน ${score}/10 เรียบร้อยแล้ว`);
     } catch (err) {
       setMessage(err.message);
     }
@@ -45,7 +47,7 @@ function MovieActions({ movieId }) {
       setMessage(err.message);
     }
   }
-  //ทำแล้ว
+  //ทำแล้ว  
 
   return (
     <div className="mt-4 space-y-3">
